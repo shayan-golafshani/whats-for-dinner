@@ -82,7 +82,8 @@ function showDish(e){
   var main = getRandomDish(mains); 
   var dessert = getRandomDish(desserts);
 
-  potBox.classList.add("hide")
+  //potBox.classList.add("hide")
+  hidePot();
   paragraph1.innerHTML = `You should make: `;
   
   if(sideRadial.checked){
@@ -113,15 +114,35 @@ function insertRecipe(e){
   var name = recipeNameInput.value;
 
   if(type === 'side' || type === 'Side') {
-
+    sides.push(name);
+    recipeDisplay(name);
+    hidePot();
   } else if (type === 'main' || type === 'Main' || type === 'main dish' || type === 'Main Dish') {
-
-  } else if (type === 'dessert' || type === 'desserts'){
-
+    mains.push(name);
+    recipeDisplay(name);
+    hidePot();
+  } else if (type === 'dessert' || type === 'Dessert'){
+    desserts.push(name);
+    recipeDisplay(name);
+    hidePot();
   } else {
+    recipeTypeInput.value = "";
+    recipeNameInput.value = "";  
     alert("Please correctly enter recipe type. Valid options include : side, Side, main, Main, main dish, Main Dish, dessert or Dessert");
   }
-  console.log(type, name)
+  
+  // paragraph1.innerHTML = `You should make: `;
+  // paragraph2.innerHTML = `${name}`;
+  console.log(type, name);
+}
+
+function recipeDisplay(name){
+  paragraph1.innerHTML = `You should make: `;
+  paragraph2.innerHTML = `${name}`;
+}
+
+function hidePot(){
+  potBox.classList.add("hide");
 }
 
 function getRandomDish(dishType) {
