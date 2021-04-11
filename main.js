@@ -62,13 +62,17 @@ var paragraph2 = document.querySelector('.second-paragraph');
 var cookButton = document.querySelector('#js-cook-btn');
 var clearButton = document.querySelector('#js-clear-recipe-btn');
 var addRecipeButton = document.querySelector('#js-add-recipe-btn');
+var insertRecipeButton = document.querySelector('#js-insert-recipe-btn')
 
 var addNewRecipeForm = document.querySelector('#js-add-recipe-form');
+var recipeNameInput = document.querySelector('#r-name');
+var recipeTypeInput = document.querySelector('#r-type');
 
 //Add Event-Listeners
 cookButton.addEventListener('click', showDish);
 clearButton.addEventListener('click', hideDish);
-addRecipeButton.addEventListener('click', addRecipe);
+addRecipeButton.addEventListener('click', showRecipeForm);
+insertRecipeButton.addEventListener('click', insertRecipe);
 
 
 //functions below
@@ -99,8 +103,25 @@ function hideDish() {
   paragraph2.innerHTML = ``;
 }
 
-function addRecipe(){
+function showRecipeForm(){
   addNewRecipeForm.classList.remove("hide-element");
+}
+
+function insertRecipe(e){
+  e.preventDefault();
+  var type = recipeTypeInput.value;
+  var name = recipeNameInput.value;
+
+  if(type === 'side' || type === 'Side') {
+
+  } else if (type === 'main' || type === 'Main' || type === 'main dish' || type === 'Main Dish') {
+
+  } else if (type === 'dessert' || type === 'desserts'){
+
+  } else {
+    alert("Please correctly enter recipe type. Valid options include : side, Side, main, Main, main dish, Main Dish, dessert or Dessert");
+  }
+  console.log(type, name)
 }
 
 function getRandomDish(dishType) {
