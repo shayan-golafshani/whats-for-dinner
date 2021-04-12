@@ -128,12 +128,8 @@ function insertRecipe(e){
   } else {
     recipeTypeInput.value = "";
     recipeNameInput.value = "";  
-    alert("Please correctly enter recipe type. Valid options include : side, Side, main, Main, main dish, Main Dish, dessert or Dessert");
+    alert("Please correctly enter recipe type. Valid options include : side, main, main dish, & dessert");
   }
-  
-  // paragraph1.innerHTML = `You should make: `;
-  // paragraph2.innerHTML = `${name}`;
-  console.log(type, name);
 }
 
 function recipeDisplay(name){
