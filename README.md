@@ -2,22 +2,14 @@
 
 ## Overview
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+Here lies a website that helps you think up what you should make when you get hungry. If you select a main entree, side, dessert, or even a whole meal.
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+If you click the let's cook button the pot will disappear and you will thus be able to get your list of items that you can cook for dinner.
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+## What I learned
 
-## Learning Goals
+I learned from this project that if you haven't found an answer after four hours of research, heck probably even one.... cut your losses and move on. I wanted to integrate in a nice login page that someone else had made, but I didn't know how to redirect a user once only, so I spent 4 hours trying to figure that out to no avail. In hindsight I would've stopped after the 30th google tag opened.
 
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
+## Future considerations
 
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
+In the future I really would like to learn how integrate other html files, how to redirect, and do so gracefully without being lost searching through so, so many tabs..... This is all the stamina I have left to write.
